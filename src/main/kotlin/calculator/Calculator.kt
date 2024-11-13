@@ -1,22 +1,39 @@
 package calculator
 
+import calculator.Operator.ADD
+import calculator.Operator.DIVIDE
+import calculator.Operator.MULTIPLY
+import calculator.Operator.SUBTRACT
+
 class Calculator {
-    fun add(
+    fun calculate(
+        a: Double,
+        b: Double,
+        operator: Operator,
+    ): Double =
+        when (operator) {
+            ADD -> add(a, b)
+            SUBTRACT -> subtract(a, b)
+            MULTIPLY -> multiply(a, b)
+            DIVIDE -> divide(a, b)
+        }
+
+    private fun add(
         a: Double,
         b: Double,
     ): Double = a + b
 
-    fun subtract(
+    private fun subtract(
         a: Double,
         b: Double,
     ): Double = a - b
 
-    fun multiply(
+    private fun multiply(
         a: Double,
         b: Double,
     ): Double = a * b
 
-    fun divide(
+    private fun divide(
         a: Double,
         b: Double,
     ): Double {
