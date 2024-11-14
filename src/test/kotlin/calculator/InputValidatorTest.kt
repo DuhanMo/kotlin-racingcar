@@ -12,13 +12,6 @@ class InputValidatorTest : StringSpec({
         }
     }
 
-    "입력값이 null 인 경우 예외 발생한다" {
-        val sut = InputValidator()
-        shouldThrowWithMessage<IllegalArgumentException>("The input cannot be null or blank") {
-            sut.validate(null)
-        }
-    }
-
     "입력값이 사칙연산이 아닌 문자열 포함한 경우 예외 발생한다" {
         val sut = InputValidator()
         listOf("a", "a + 2", "3 + a", "3 $ 3", "%$").forAll {

@@ -1,13 +1,15 @@
 package calculator
 
+import calculator.Operator.Companion.isOperator
+
 class InputValidator {
-    fun validate(input: String?) {
-        if (input.isNullOrBlank()) {
+    fun validate(input: String) {
+        if (input.isBlank()) {
             throw IllegalArgumentException("The input cannot be null or blank")
         }
 
         val tokens = input.trimIndent().split(" ")
-        if (tokens.size % 2 == 0 || tokens.last().isOperator()) {
+        if (tokens.size % 2 == 0) {
             throw IllegalArgumentException("There is an invalid input")
         }
         tokens.forEachIndexed { index, arg ->
@@ -19,8 +21,6 @@ class InputValidator {
             }
         }
     }
-
-    private fun String.isOperator(): Boolean = this == "+" || this == "-" || this == "*" || this == "/"
 
     private fun String.isDouble(): Boolean = this.toDoubleOrNull() != null
 }

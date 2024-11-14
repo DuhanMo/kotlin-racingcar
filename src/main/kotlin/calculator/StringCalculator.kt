@@ -1,17 +1,21 @@
 package calculator
 
+import calculator.Calculator.calculate
+
 class StringCalculator {
-    fun calculate(input: String?): String {
+    fun calculate(input: String): String {
         val parseResult = InputParser(InputValidator()).parse(input)
         val numbers = parseResult.numbers
         val operators = parseResult.operators
-        val calculator = Calculator()
 
-        return numbers.drop(1).zip(operators)
-            .fold(numbers[0]) { acc, (number, operator) ->
-                calculator.calculate(acc, number, operator)
-            }.let { result ->
-                if (result % 1.0 == 0.0) result.toInt().toString() else result.toString()
-            }
+        var result = numbers[0]
+        for (i in operators.indices) {
+            val nextNumber = numbers[i + 1]
+            val operator = operators[i]
+            result = calculate(result, nextNumber, operator)
+        }
+        return if (result.isInteger()) result.toInt().toString() else result.toString()
     }
+
+    private fun Double.isInteger(): Boolean = this % 1.0 == 0.0
 }
