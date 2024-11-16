@@ -15,5 +15,6 @@ class Car private constructor(
 
     companion object {
         private const val MOVE_FORWARD_THRESHOLD = 4
+        const val MOVE_FORWARD_CONDITION_BOUNDS = 10
     }
 }
