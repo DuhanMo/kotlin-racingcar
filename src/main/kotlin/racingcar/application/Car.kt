@@ -1,4 +1,4 @@
-package racingcar
+package racingcar.application
 
 class Car private constructor(
     var step: Int,

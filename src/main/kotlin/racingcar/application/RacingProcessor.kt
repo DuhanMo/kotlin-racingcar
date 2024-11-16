@@ -1,6 +1,6 @@
-package racingcar
+package racingcar.application
 
-import racingcar.Car.Companion.MOVE_FORWARD_CONDITION_BOUNDS
+import racingcar.application.Car.Companion.MOVE_FORWARD_CONDITION_BOUNDS
 
 class RacingProcessor(
     private val randomGenerator: RandomGenerator,
