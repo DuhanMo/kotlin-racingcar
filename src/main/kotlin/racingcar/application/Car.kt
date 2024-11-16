@@ -3,6 +3,11 @@ package racingcar.application
 class Car private constructor(
     var step: Int,
 ) {
+    companion object {
+        private const val MOVE_FORWARD_THRESHOLD = 4
+        const val MOVE_FORWARD_CONDITION_BOUNDS = 10
+    }
+
     constructor() : this(
         step = 0,
     )
@@ -11,10 +16,5 @@ class Car private constructor(
         if (condition >= MOVE_FORWARD_THRESHOLD) {
             step++
         }
-    }
-
-    companion object {
-        private const val MOVE_FORWARD_THRESHOLD = 4
-        const val MOVE_FORWARD_CONDITION_BOUNDS = 10
     }
 }
