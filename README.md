@@ -25,3 +25,13 @@
 **추가 반영사항**
 - 정규표현식을 통해 패턴을 찾을 때 연산자가 추가될수있음을 고려해 동적 패턴 생성
 
+### 리뷰반영사항 - 2
+- [ ] Operator::SAM 을 통한 개선
+- [x] Operator::확장함수의 제한
+- [x] Calculator::불필요한 클래스 제거
+- [x] InputParser::REGEX 상수 네이밍 규칙 적용
+- [x] InputValidator::require 활용
+- [x] Input::runCatching <-> try catch 변환 고려
+- [x] InputParser::동반객체 위치 컨벤션 지켜보기
+- [x] StringCalculator::문자열반환의 필요성 고려
+- [x] StringCalculator::범용적으로 쓰일만한 확장함수 접근 제한 확장 고려

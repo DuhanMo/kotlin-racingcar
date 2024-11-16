@@ -64,13 +64,13 @@ class OperatorTest : StringSpec({
 
     "문자열 토큰이 심볼과 일치하는 경우 참을 반환한다" {
         listOf("+", "-", "*", "/").forAll { token ->
-            token.isOperator() shouldBe true
+            isOperator(token) shouldBe true
         }
     }
 
     "문자열 토큰이 심볼과 일치하지 않는 경우 거짓을 반환한다" {
         listOf("^", "&", "$", "#", "@").forAll { token ->
-            token.isOperator() shouldBe false
+            isOperator(token) shouldBe false
         }
     }
 })

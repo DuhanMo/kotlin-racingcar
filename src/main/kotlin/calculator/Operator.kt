@@ -43,6 +43,6 @@ enum class Operator(
         fun fromToken(token: String): Operator =
             entries.find { it.symbol == token } ?: throw IllegalArgumentException("Not found operator from $token")
 
-        fun String.isOperator(): Boolean = entries.map { it.symbol }.contains(this)
+        fun isOperator(token: String): Boolean = entries.map { it.symbol }.contains(token)
     }
 }

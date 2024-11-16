@@ -8,8 +8,8 @@ class InputParser(
     fun parse(input: String): ParseResult {
         validator.validate(input)
         return ParseResult(
-            numbers = numberRegex.findAll(input).map { it.value.toDouble() }.toList(),
-            operators = operatorRegex.findAll(input).map { fromToken(it.value) }.toList(),
+            numbers = NUMBER_REGEX.findAll(input).map { it.value.toDouble() }.toList(),
+            operators = OPERATOR_REGEX.findAll(input).map { fromToken(it.value) }.toList(),
         )
     }
 
@@ -18,8 +18,8 @@ class InputParser(
         private const val ESCAPED_OPERATOR_PATTERN_PREFIX = "\\Q"
         private const val ESCAPED_OPERATOR_PATTERN_SUFFIX = "\\E"
 
-        private val numberRegex = NUMBER_PATTERN.toRegex()
-        private val operatorRegex =
+        private val NUMBER_REGEX = NUMBER_PATTERN.toRegex()
+        private val OPERATOR_REGEX =
             Operator.entries
                 .joinToString(separator = "|", prefix = "(", postfix = ")") {
                     "$ESCAPED_OPERATOR_PATTERN_PREFIX${it.symbol}$ESCAPED_OPERATOR_PATTERN_SUFFIX"
