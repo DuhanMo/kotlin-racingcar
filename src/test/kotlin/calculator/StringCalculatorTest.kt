@@ -12,10 +12,10 @@ class StringCalculatorTest : StringSpec({
         val sut = StringCalculator()
         table(
             headers("input", "expected"),
-            row("1 + 1", "2"),
-            row("2 + 4 * 3", "18"),
-            row("10 * 10 - 1", "99"),
-            row("10 * 10 / 20 + 1", "6"),
+            row("1 + 1", 2),
+            row("2 + 4 * 3", 18),
+            row("10 * 10 - 1", 99),
+            row("10 * 10 / 20 + 1", 6),
         ).forAll { input, expected ->
             sut.calculate(input) shouldBe expected
         }
@@ -25,9 +25,9 @@ class StringCalculatorTest : StringSpec({
         val sut = StringCalculator()
         table(
             headers("input", "expected"),
-            row("5 + 5 / 4", "2.5"),
-            row("3 * 2 / 4", "1.5"),
-            row("2 * 5 / 3", "3.3333333333333335"),
+            row("5 + 5 / 4", 2.5),
+            row("3 * 2 / 4", 1.5),
+            row("2 * 5 / 3", 3.3333333333333335),
         ).forAll { input, expected ->
             sut.calculate(input) shouldBe expected
         }

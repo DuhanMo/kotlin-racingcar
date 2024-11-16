@@ -9,9 +9,9 @@ fun main() {
             println("종료합니다.")
             break
         }
-        runCatching {
+        try {
             println(calculator.calculate(input))
-        }.getOrElse { ex ->
+        } catch (ex: Exception) {
             println(ex.message)
         }
     }
