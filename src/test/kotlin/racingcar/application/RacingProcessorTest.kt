@@ -10,7 +10,7 @@ class RacingProcessorTest : StringSpec({
         val fixedValue = 4
         val mockRandomGenerator = MockRandomGenerator(fixedValue)
         val racingProcessor = RacingProcessor(mockRandomGenerator)
-        val cars = listOf(Car(), Car())
+        val cars = listOf(Car.createDefault(), Car.createDefault())
         racingProcessor.race(cars = cars)
         cars.forAll {
             it.step shouldBe 1
@@ -21,7 +21,7 @@ class RacingProcessorTest : StringSpec({
         val fixedValue = 3
         val mockRandomGenerator = MockRandomGenerator(fixedValue)
         val racingProcessor = RacingProcessor(mockRandomGenerator)
-        val cars = listOf(Car(), Car())
+        val cars = listOf(Car.createDefault(), Car.createDefault())
         racingProcessor.race(cars = cars)
         cars.forAll {
             it.step shouldBe 0
