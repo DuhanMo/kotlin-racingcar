@@ -1,7 +1,5 @@
 package racingcar
 
-private const val MOVE_FORWARD_THRESHOLD = 4
-
 class Car private constructor(
     var step: Int,
 ) {
@@ -13,5 +11,9 @@ class Car private constructor(
         if (condition >= MOVE_FORWARD_THRESHOLD) {
             step++
         }
+    }
+
+    companion object {
+        private const val MOVE_FORWARD_THRESHOLD = 4
     }
 }
