@@ -22,6 +22,7 @@ class OperatorTest : StringSpec({
     "더하기 연산자는 더하기를 수행한다" {
         ADD.operate(1.0, 2.0) shouldBeExactly 3.0
     }
+
     "뺄셈 연산자는 뺄셈을 수행한다" {
         SUBTRACT.operate(5.0, 3.0) shouldBeExactly 2.0
     }
