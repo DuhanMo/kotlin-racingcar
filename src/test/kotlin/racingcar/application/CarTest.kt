@@ -1,5 +1,6 @@
 package racingcar.application
 
+import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
@@ -12,5 +13,11 @@ class CarTest : StringSpec({
         val sut = Car.createDefault(name = "car2")
         sut.moveForward(4)
         sut.step shouldBe 1
+    }
+
+    "자동차 이름이 5자 초과시 예외 발생한다" {
+        shouldThrow<IllegalArgumentException> {
+            Car.createDefault("aaa_aaa")
+        }
     }
 })

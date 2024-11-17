@@ -14,6 +14,7 @@ class Car private constructor(
 
     companion object {
         fun createDefault(name: String): Car {
+            require(name.trim().length <= 5) { "자동차 이름은 5자를 초과할 수 없습니다" }
             return Car(
                 name = name,
                 step = 0,
