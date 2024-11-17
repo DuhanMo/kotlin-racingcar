@@ -13,6 +13,8 @@ class Car private constructor(
         private const val MOVE_FORWARD_THRESHOLD = 4
         const val MOVE_FORWARD_CONDITION_BOUNDS = 10
 
-        fun createDefault(): Car = Car(step = 0)
+        fun createDefault(): Car {
+            return Car(step = 0)
+        }
     }
 }

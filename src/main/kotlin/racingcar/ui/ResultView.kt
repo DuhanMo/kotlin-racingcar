@@ -10,8 +10,9 @@ object ResultView {
         println()
     }
 
-    private fun makeLine(count: Int): String =
-        StringBuilder()
+    private fun makeLine(count: Int): String {
+        return StringBuilder()
             .append("-".repeat(count))
             .toString()
+    }
 }
