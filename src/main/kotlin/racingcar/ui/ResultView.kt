@@ -5,14 +5,8 @@ import racingcar.application.Car
 object ResultView {
     fun print(cars: List<Car>) {
         cars.forEach { car ->
-            println(makeLine(count = car.step))
+            println("-".repeat(car.step))
         }
         println()
-    }
-
-    private fun makeLine(count: Int): String {
-        return StringBuilder()
-            .append("-".repeat(count))
-            .toString()
     }
 }
