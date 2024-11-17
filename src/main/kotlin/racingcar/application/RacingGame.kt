@@ -6,7 +6,7 @@ class RacingGame(
 ) {
     fun race() {
         cars.forEach { car ->
-            val condition = carMoveConditionGenerator.generate()
+            val condition = carMoveConditionGenerator.generateRandomCondition()
             car.moveForward(condition)
         }
     }
