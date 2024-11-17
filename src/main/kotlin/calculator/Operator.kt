@@ -2,42 +2,24 @@ package calculator
 
 enum class Operator(
     val symbol: String,
+    private val doOperate: (Double, Double) -> Double,
 ) {
-    ADD("+") {
-        override fun operate(
-            a: Double,
-            b: Double,
-        ): Double = a + b
-    },
-    SUBTRACT("-") {
-        override fun operate(
-            a: Double,
-            b: Double,
-        ): Double = a - b
-    },
-    MULTIPLY("*") {
-        override fun operate(
-            a: Double,
-            b: Double,
-        ): Double = a * b
-    },
-    DIVIDE("/") {
-        override fun operate(
-            a: Double,
-            b: Double,
-        ): Double {
-            if (b == 0.0) {
-                throw IllegalArgumentException("Division by zero is not allowed")
-            }
-            return a / b
+    ADD("+", { a, b -> a + b }),
+    SUBTRACT("-", { a, b -> a - b }),
+    MULTIPLY("*", { a, b -> a * b }),
+    DIVIDE("/", { a, b ->
+        if (b == 0.0) {
+            throw IllegalArgumentException("Division by zero is not allowed")
+        } else {
+            a / b
         }
-    },
+    }),
     ;
 
-    abstract fun operate(
+    fun operate(
         a: Double,
         b: Double,
-    ): Double
+    ): Double = doOperate(a, b)
 
     companion object {
         fun fromToken(token: String): Operator =
