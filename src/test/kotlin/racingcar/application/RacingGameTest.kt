@@ -5,7 +5,7 @@ import io.kotest.inspectors.forAll
 import io.kotest.matchers.shouldBe
 import racingcar.mock.MockRandomGenerator
 
-class RacingProcessorTest : StringSpec({
+class RacingGameTest : StringSpec({
     "random 값이 4 이상일 경우 차들은 전진한다" {
         val fixedValue = 4
         val mockRandomGenerator = MockRandomGenerator(fixedValue)
