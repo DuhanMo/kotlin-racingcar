@@ -5,7 +5,7 @@ import racingcar.application.Car
 object ResultView {
     fun print(cars: List<Car>) {
         cars.forEach { car ->
-            println("-".repeat(car.step))
+            println("${car.name} : ${"-".repeat(car.step)}")
         }
         println()
     }
