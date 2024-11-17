@@ -1,5 +1,7 @@
 package racingcar.application
 
+private const val MOVE_FORWARD_THRESHOLD = 4
+
 class Car private constructor(
     var step: Int,
 ) {
@@ -10,9 +12,6 @@ class Car private constructor(
     }
 
     companion object {
-        private const val MOVE_FORWARD_THRESHOLD = 4
-        const val MOVE_FORWARD_CONDITION_BOUNDS = 10
-
         fun createDefault(): Car {
             return Car(step = 0)
         }

@@ -48,7 +48,7 @@
 - [x] RacingProcessor::block 구문과 표현식 일관성 고려
 - [x] RandomGenerator::역할을 더 명확히 드러내도록 클래스명 고려
 - [x] ResultView::불필요한 메서드 추출 수정
-- [ ] Car::객체 행동을 통한 상수 위치 고려
+- [x] Car::객체 행동을 통한 상수 위치 고려
 
 ### 요구사항
 #### 프로그래밍 요구사항
