@@ -3,12 +3,12 @@ package racingcar.application
 import racingcar.application.Car.Companion.MOVE_FORWARD_CONDITION_BOUNDS
 
 class RacingGame(
-    private val randomGenerator: RandomGenerator,
+    private val carMoveConditionGenerator: CarMoveConditionGenerator,
 ) {
     fun race(cars: List<Car>): List<Car> {
         cars.forEach { car ->
-            val randomNumber = randomGenerator.generate(MOVE_FORWARD_CONDITION_BOUNDS)
-            car.moveForward(randomNumber)
+            val condition = carMoveConditionGenerator.generate(MOVE_FORWARD_CONDITION_BOUNDS)
+            car.moveForward(condition)
         }
         return cars
     }

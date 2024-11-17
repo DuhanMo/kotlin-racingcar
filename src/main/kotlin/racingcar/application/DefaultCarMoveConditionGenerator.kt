@@ -2,7 +2,7 @@ package racingcar.application
 
 import kotlin.random.Random.Default.nextInt
 
-object DefaultRandomGenerator : RandomGenerator {
+object DefaultCarMoveConditionGenerator : CarMoveConditionGenerator {
     override fun generate(until: Int): Int {
         return nextInt(until)
     }

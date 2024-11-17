@@ -1,5 +1,5 @@
 package racingcar.application
 
-interface RandomGenerator {
+interface CarMoveConditionGenerator {
     fun generate(until: Int): Int
 }
