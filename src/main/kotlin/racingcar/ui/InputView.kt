@@ -12,9 +12,9 @@ fun main() {
     val moveTryCount = readlnOrNull()?.toInt() ?: throw IllegalArgumentException()
 
     val cars = CarManager.createCars(numberOfCars)
-    val racingGame = RacingGame(DefaultCarMoveConditionGenerator)
+    val racingGame = RacingGame(DefaultCarMoveConditionGenerator, cars)
     println("실행 결과")
     repeat(moveTryCount) {
-        print(cars = racingGame.race(cars))
+        print(cars = racingGame.cars)
     }
 }

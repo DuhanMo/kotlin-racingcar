@@ -44,7 +44,7 @@
 ## Step4 자동차 경주(우승자)
 ### Step3 리뷰 반영사항
 - [x] RacingProcessor::실세계 객체로써 클래스명 고려 
-- [ ] RacingProcessor::cars 를 상태로서 관리
+- [x] RacingProcessor::cars 를 상태로서 관리
 - [x] RacingProcessor::block 구문과 표현식 일관성 고려
 - [x] RandomGenerator::역할을 더 명확히 드러내도록 클래스명 고려
 - [x] ResultView::불필요한 메서드 추출 수정
