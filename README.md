@@ -40,3 +40,22 @@
 - [x] 결과를 출력하라
 - [x] 랜덤한 값을 생성하라
 - [x] 자동차에게 랜덤값을 전달하라
+
+## Step4 자동차 경주(우승자)
+### Step3 리뷰 반영사항
+- [x] RacingProcessor::실세계 객체로써 클래스명 고려 
+- [ ] RacingProcessor::cars 를 상태로서 관리
+- [ ] RacingProcessor::block 구문과 표현식 일관성 고려
+- [ ] RandomGenerator::역할을 더 명확히 드러내도록 클래스명 고려
+- [ ] ResultView::불필요한 메서드 추출 수정
+- [ ] Car::객체 행동을 통한 상수 위치 고려
+
+### 요구사항
+#### 프로그래밍 요구사항
+- [ ] UI 제외 모든로직 단위테스트
+- [ ] indent depth 1 제한
+- [ ] method 15 line 제한
+- [ ] 기능요구사항 readme 정리
+- [ ] 기능 단위 commit
+
+#### 기능 요구사항

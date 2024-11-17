@@ -2,7 +2,7 @@ package racingcar.ui
 
 import racingcar.application.CarManager
 import racingcar.application.DefaultRandomGenerator
-import racingcar.application.RacingProcessor
+import racingcar.application.RacingGame
 import racingcar.ui.ResultView.print
 
 fun main() {
@@ -12,9 +12,9 @@ fun main() {
     val moveTryCount = readlnOrNull()?.toInt() ?: throw IllegalArgumentException()
 
     val cars = CarManager.createCars(numberOfCars)
-    val racingProcessor = RacingProcessor(DefaultRandomGenerator)
+    val racingGame = RacingGame(DefaultRandomGenerator)
     println("실행 결과")
     repeat(moveTryCount) {
-        print(cars = racingProcessor.race(cars))
+        print(cars = racingGame.race(cars))
     }
 }

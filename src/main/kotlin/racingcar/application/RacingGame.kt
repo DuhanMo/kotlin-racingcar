@@ -2,7 +2,7 @@ package racingcar.application
 
 import racingcar.application.Car.Companion.MOVE_FORWARD_CONDITION_BOUNDS
 
-class RacingProcessor(
+class RacingGame(
     private val randomGenerator: RandomGenerator,
 ) {
     fun race(cars: List<Car>): List<Car> =
