@@ -52,11 +52,11 @@
 
 ### 요구사항
 #### 프로그래밍 요구사항
-- [ ] UI 제외 모든로직 단위테스트
-- [ ] indent depth 1 제한
-- [ ] method 15 line 제한
-- [ ] 기능요구사항 readme 정리
-- [ ] 기능 단위 commit
+- [x] UI 제외 모든로직 단위테스트
+- [x] indent depth 1 제한
+- [x] method 15 line 제한
+- [x] 기능요구사항 readme 정리
+- [x] 기능 단위 commit
 
 #### 기능 요구사항
 - [x] 자동차 이름 목록을 쉼표 기준으로 구분하여 입력받는다
