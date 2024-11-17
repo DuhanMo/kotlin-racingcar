@@ -19,4 +19,7 @@ fun main() {
         racingGame.race()
         print(cars = racingGame.cars)
     }
+    val maxStep = cars.maxOf { it.step }
+    val winners = cars.filter { it.step == maxStep }
+    println("${winners.joinToString(",") { it.name }}가 최종 우승 했습니다.")
 }
