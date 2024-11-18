@@ -67,10 +67,11 @@
 ### 리뷰반영사항 - 1
 - [x] Car::유효성 검증로직 init block 위치 수정
 - [x] Car::매직넘버 수정
-- [x] DefaultCarMoveConditionGenerator::최상위변수와 동반객체 상수 고민
+- [ ] DefaultCarMoveConditionGenerator::최상위변수와 동반객체 상수 고민
 - [x] InputView::불필요한 변수선언 수정
 - [x] InputView::적절한 예외 메시지 출력
-- [ ] InputView::moveTryCount 반복시키는 역할 분리
-- [ ] ResultView::우승자 판단로직과 출력로직 분리
+- [ ] DefaultCarMoveConditionGenerator::난수생성이 아닌 명확한 메시지를 반환하도록 수정
+- [x] InputView::moveTryCount 반복시키는 역할 분리
+- [x] ResultView::우승자 판단로직과 출력로직 분리
 - [ ] CarTest::전진조건 4미만일 때에 대한 테스트
 - [ ] DefaultCarMoveConditionGeneratorTest::fun interface 적용
