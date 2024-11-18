@@ -65,11 +65,11 @@
 - [x] 자동차 이름은 5자를 초과할 수 없다
 
 ### 리뷰반영사항 - 1
-- [] Car::유효성 검증로직 init block 위치 수정
+- [x] Car::유효성 검증로직 init block 위치 수정
 - [x] Car::매직넘버 수정
-- [ ] DefaultCarMoveConditionGenerator::최상위변수와 동반객체 상수 고민
-- [ ] InputView::불필요한 변수선언 수정
-- [ ] InputView::적절한 예외 메시지 출력
+- [x] DefaultCarMoveConditionGenerator::최상위변수와 동반객체 상수 고민
+- [x] InputView::불필요한 변수선언 수정
+- [x] InputView::적절한 예외 메시지 출력
 - [ ] InputView::moveTryCount 반복시키는 역할 분리
 - [ ] ResultView::우승자 판단로직과 출력로직 분리
 - [ ] CarTest::전진조건 4미만일 때에 대한 테스트

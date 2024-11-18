@@ -22,9 +22,8 @@ fun main() {
 }
 
 private fun inputCars(): List<Car> {
-    val cars =
-        readlnOrNull()?.split(",")
-            ?.map { createDefault(name = it) }
-            ?: throw IllegalArgumentException()
-    return cars
+    return readlnOrNull()?.takeIf { it.isNotBlank() }
+        ?.split(",")
+        ?.map { createDefault(name = it) }
+        ?: throw IllegalArgumentException("The name cannot be null or blank")
 }
