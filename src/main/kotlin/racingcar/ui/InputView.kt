@@ -5,6 +5,7 @@ import racingcar.application.Car.Companion.createDefault
 import racingcar.application.DefaultCarMovementDecider
 import racingcar.application.RaceBoard
 import racingcar.application.RacingGame
+import racingcar.ui.CarUiConstant.COMMA
 import racingcar.ui.ResultView.printRacingResult
 import racingcar.ui.ResultView.printWinners
 
@@ -23,7 +24,7 @@ fun main() {
 
 private fun inputCars(): List<Car> {
     return readlnOrNull()?.takeIf { it.isNotBlank() }
-        ?.split(",")
+        ?.split(COMMA)
         ?.map { createDefault(name = it) }
         ?: throw IllegalArgumentException("The name cannot be null or blank")
 }
