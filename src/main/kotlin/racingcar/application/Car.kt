@@ -8,6 +8,10 @@ class Car private constructor(
     val name: String,
     var position: Int,
 ) {
+    init {
+        require(name.trim().length <= CAR_NAME_LENGTH_LIMIT) { "자동차 이름은 5자를 초과할 수 없습니다" }
+    }
+
     fun moveForward(condition: Int) {
         if (condition >= MOVE_FORWARD_THRESHOLD) {
             position++
@@ -16,7 +20,6 @@ class Car private constructor(
 
     companion object {
         fun createDefault(name: String): Car {
-            require(name.trim().length <= CAR_NAME_LENGTH_LIMIT) { "자동차 이름은 5자를 초과할 수 없습니다" }
             return Car(
                 name = name,
                 position = STARTING_POSITION,
