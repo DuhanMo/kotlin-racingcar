@@ -18,6 +18,7 @@ class DefaultCarMovementDeciderTest : StringSpec({
         val decider = DefaultCarMovementDecider(random = customRandom)
         decider.canMove() shouldBe true
     }
+
     "랜덤값이 임계값보다 작을 경우 false 반환한다" {
         val customRandom =
             object : Random() {
