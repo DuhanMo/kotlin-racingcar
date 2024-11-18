@@ -8,7 +8,10 @@ class RaceBoard {
     fun recordRaceResultPerRound(cars: List<Car>) {
         this._raceResultPerRounds.add(
             RaceResultPerRound(
-                carPositions = cars.map { CarPosition(name = it.name, position = it.position) },
+                carPositions =
+                    cars.map {
+                        CarPosition(name = it.name, position = it.position)
+                    },
             ),
         )
     }

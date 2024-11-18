@@ -11,7 +11,7 @@ class CarTest : StringSpec({
 
     "전진 조건의 값이 4이상일 경우 1만큼 전진한다" {
         val sut = Car.createDefault(name = "car2")
-        sut.moveForward(4)
+        sut.moveForward()
         sut.position shouldBe 1
     }
 

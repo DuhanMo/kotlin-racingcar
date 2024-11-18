@@ -4,26 +4,23 @@ import io.kotest.core.spec.style.StringSpec
 import io.kotest.inspectors.forAll
 import io.kotest.matchers.shouldBe
 import racingcar.application.Car.Companion.createDefault
-import racingcar.mock.MockCarMoveConditionGenerator
 
 class RacingGameTest : StringSpec({
-    "random 값이 4 이상일 경우 차들은 전진한다" {
-        val fixedValue = 4
-        val generator = MockCarMoveConditionGenerator(fixedValue)
+    "canMove가 true일 경우 차들은 전진한다" {
+        val decider = CarMovementDecider { true }
         val cars = listOf(createDefault("car1"), createDefault("car2"))
-        val racingGame = RacingGame(generator, cars)
-        racingGame.race()
+        val racingGame = RacingGame(decider, cars, RaceBoard())
+        racingGame.race(3)
         cars.forAll {
-            it.position shouldBe 1
+            it.position shouldBe 3
         }
     }
 
-    "random 값이 4 미만일 경우 차들은 전진하지 않는다" {
-        val fixedValue = 3
-        val generator = MockCarMoveConditionGenerator(fixedValue)
+    "canMove가 false 경우 차들은 전진하지 않는다" {
+        val decider = CarMovementDecider { false }
         val cars = listOf(createDefault("car1"), createDefault("car2"))
-        val racingGame = RacingGame(generator, cars)
-        racingGame.race()
+        val racingGame = RacingGame(decider, cars, RaceBoard())
+        racingGame.race(3)
         cars.forAll {
             it.position shouldBe 0
         }

@@ -1,9 +1,5 @@
 package racingcar.application
 
-private const val MOVE_FORWARD_THRESHOLD = 4
-private const val CAR_NAME_LENGTH_LIMIT = 5
-private const val STARTING_POSITION = 0
-
 class Car private constructor(
     val name: String,
     var position: Int,
@@ -12,13 +8,14 @@ class Car private constructor(
         require(name.trim().length <= CAR_NAME_LENGTH_LIMIT) { "자동차 이름은 5자를 초과할 수 없습니다" }
     }
 
-    fun moveForward(condition: Int) {
-        if (condition >= MOVE_FORWARD_THRESHOLD) {
-            position++
-        }
+    fun moveForward() {
+        position++
     }
 
     companion object {
+        private const val CAR_NAME_LENGTH_LIMIT = 5
+        private const val STARTING_POSITION = 0
+
         fun createDefault(name: String): Car {
             return Car(
                 name = name,
