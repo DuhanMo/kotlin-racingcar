@@ -14,7 +14,7 @@ class RacingGameTest : StringSpec({
         val racingGame = RacingGame(generator, cars)
         racingGame.race()
         cars.forAll {
-            it.step shouldBe 1
+            it.position shouldBe 1
         }
     }
 
@@ -25,7 +25,7 @@ class RacingGameTest : StringSpec({
         val racingGame = RacingGame(generator, cars)
         racingGame.race()
         cars.forAll {
-            it.step shouldBe 0
+            it.position shouldBe 0
         }
     }
 })

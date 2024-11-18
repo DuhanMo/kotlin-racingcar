@@ -62,4 +62,15 @@
 - [x] 자동차 이름 목록을 쉼표 기준으로 구분하여 입력받는다
 - [x] 자동차 전진 여부 출력시 이름도 함께 출력한다
 - [x] 경주 종료시 최종 우승자를 함께 출력한다
-- [ ] 자동차 이름은 5자를 초과할 수 없다
+- [x] 자동차 이름은 5자를 초과할 수 없다
+
+### 리뷰반영사항 - 1
+- [] Car::유효성 검증로직 init block 위치 수정
+- [x] Car::매직넘버 수정
+- [ ] DefaultCarMoveConditionGenerator::최상위변수와 동반객체 상수 고민
+- [ ] InputView::불필요한 변수선언 수정
+- [ ] InputView::적절한 예외 메시지 출력
+- [ ] InputView::moveTryCount 반복시키는 역할 분리
+- [ ] ResultView::우승자 판단로직과 출력로직 분리
+- [ ] CarTest::전진조건 4미만일 때에 대한 테스트
+- [ ] DefaultCarMoveConditionGeneratorTest::fun interface 적용
