@@ -1,7 +1,6 @@
 package racingcar.ui
 
 import racingcar.application.Car
-import racingcar.application.Car.Companion.createDefault
 import racingcar.application.DefaultCarMovementDecider
 import racingcar.application.RacingGame
 import racingcar.ui.CarUiConstant.COMMA
@@ -18,12 +17,12 @@ fun main() {
     println("실행 결과")
     val raceBoard = racingGame.race(moveTryCount)
     printRacingResult(raceBoard)
-    printWinners(cars)
+    printWinners(raceBoard)
 }
 
 private fun inputCars(): List<Car> {
     return readlnOrNull()?.takeIf { it.isNotBlank() }
         ?.split(COMMA)
-        ?.map { createDefault(name = it) }
+        ?.map { Car(name = it) }
         ?: throw IllegalArgumentException("The name cannot be null or blank")
 }

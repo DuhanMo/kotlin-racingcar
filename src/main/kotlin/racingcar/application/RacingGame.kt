@@ -1,5 +1,7 @@
 package racingcar.application
 
+import racingcar.application.RaceResultPerRound.Companion.fromCars
+
 class RacingGame(
     private val carMovementDecider: CarMovementDecider,
     private val cars: List<Car>,
@@ -8,8 +10,7 @@ class RacingGame(
         val raceResultPerRounds = mutableListOf<RaceResultPerRound>()
         repeat(moveTryCount) {
             moveEachCar()
-            val carPositions = cars.map { CarPosition(it) }
-            raceResultPerRounds.add(RaceResultPerRound(carPositions))
+            raceResultPerRounds.add(fromCars(cars))
         }
         return RaceBoard(raceResultPerRounds.toList())
     }

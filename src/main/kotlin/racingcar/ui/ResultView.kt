@@ -1,9 +1,7 @@
 package racingcar.ui
 
-import racingcar.application.Car
 import racingcar.application.CarPosition
 import racingcar.application.RaceBoard
-import racingcar.application.Winner
 import racingcar.ui.CarUiConstant.COMMA
 import racingcar.ui.CarUiConstant.LINE_DELIMITER
 
@@ -15,8 +13,8 @@ object ResultView {
             }
     }
 
-    fun printWinners(cars: List<Car>) {
-        val winners = Winner.findWinners(cars)
+    fun printWinners(raceBoard: RaceBoard) {
+        val winners = raceBoard.findWinners()
         println("${winners.joinToString(COMMA) { it.name }}가 최종 우승 했습니다.")
     }
 
