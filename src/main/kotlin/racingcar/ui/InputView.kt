@@ -3,7 +3,6 @@ package racingcar.ui
 import racingcar.application.Car
 import racingcar.application.Car.Companion.createDefault
 import racingcar.application.DefaultCarMovementDecider
-import racingcar.application.RaceBoard
 import racingcar.application.RacingGame
 import racingcar.ui.CarUiConstant.COMMA
 import racingcar.ui.ResultView.printRacingResult
@@ -15,10 +14,10 @@ fun main() {
     println("시도할 횟수는 몇 회인가요?")
     val moveTryCount =
         readlnOrNull()?.toInt() ?: throw IllegalArgumentException("The try count cannot be null")
-    val racingGame = RacingGame(DefaultCarMovementDecider(), cars, RaceBoard())
+    val racingGame = RacingGame(DefaultCarMovementDecider(), cars)
     println("실행 결과")
-    racingGame.race(moveTryCount)
-    printRacingResult(racingGame.raceBoard)
+    val raceBoard = racingGame.race(moveTryCount)
+    printRacingResult(raceBoard)
     printWinners(cars)
 }
 

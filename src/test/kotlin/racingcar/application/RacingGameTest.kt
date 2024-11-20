@@ -9,8 +9,10 @@ class RacingGameTest : StringSpec({
     "canMove가 true일 경우 차들은 전진한다" {
         val decider = CarMovementDecider { true }
         val cars = listOf(createDefault("car1"), createDefault("car2"))
-        val racingGame = RacingGame(decider, cars, RaceBoard())
+        val racingGame = RacingGame(decider, cars)
+
         racingGame.race(3)
+
         cars.forAll {
             it.position shouldBe 3
         }
@@ -19,8 +21,10 @@ class RacingGameTest : StringSpec({
     "canMove가 false 경우 차들은 전진하지 않는다" {
         val decider = CarMovementDecider { false }
         val cars = listOf(createDefault("car1"), createDefault("car2"))
-        val racingGame = RacingGame(decider, cars, RaceBoard())
+        val racingGame = RacingGame(decider, cars)
+
         racingGame.race(3)
+
         cars.forAll {
             it.position shouldBe 0
         }

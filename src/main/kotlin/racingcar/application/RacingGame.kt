@@ -3,13 +3,15 @@ package racingcar.application
 class RacingGame(
     private val carMovementDecider: CarMovementDecider,
     private val cars: List<Car>,
-    val raceBoard: RaceBoard,
 ) {
-    fun race(moveTryCount: Int) {
+    fun race(moveTryCount: Int): RaceBoard {
+        val raceResultPerRounds = mutableListOf<RaceResultPerRound>()
         repeat(moveTryCount) {
             moveEachCar()
-            raceBoard.recordRaceResultPerRound(cars)
+            val carPositions = cars.map { CarPosition(it) }
+            raceResultPerRounds.add(RaceResultPerRound(carPositions))
         }
+        return RaceBoard(raceResultPerRounds.toList())
     }
 
     private fun moveEachCar() {
