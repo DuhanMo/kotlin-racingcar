@@ -75,3 +75,18 @@
 - [x] ResultView::우승자 판단로직과 출력로직 분리
 - [x] CarTest::전진조건 4미만일 때에 대한 테스트 -> DefaultCarMovementDecider 테스트로 변환
 - [x] CarMovementDecider::fun interface 적용
+
+## Step5 자동차 경주(우승자)
+### Step4 리뷰 반영사항
+
+- [x] DefaultCarMovementDecider::중요하지 않는 테스트를 위한 도메인로직 변경 원복
+- [ ] RacingGame::race결과로 race board 반환
+- [ ] RacingGame::card 가 스스로 판단하여 움직이도록 moveForward 시그니처 수정
+- [ ] RacingGame::CarMovementDecider를 상태로 두지않고 메서드파라미터로 전달
+- [ ] RacingGameTest::fun interface 파라미터 위치 수정과함께 람다식으로 수정
+- [ ] Winner::우승자를 찾는 역할을 다른객체에게 위임
+
+### 요구사항
+#### 프로그래밍 요구사항
+- [ ] 핵심 비지니스 로직을 가지는 객체를 domain 패키지, UI 관련한 객체를 view 패키지에 구현한다.
+- [ ] MVC 패턴 기반으로 리팩토링해 view 패키지의 객체가 domain 패키지 객체에 의존할 수 있지만, domain 패키지의 객체는 view 패키지 객체에 의존하지 않도록 구현한다.

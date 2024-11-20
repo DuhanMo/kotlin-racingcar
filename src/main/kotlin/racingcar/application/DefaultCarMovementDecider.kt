@@ -1,12 +1,10 @@
 package racingcar.application
 
-import kotlin.random.Random
+import kotlin.random.Random.Default.nextInt
 
-class DefaultCarMovementDecider(
-    private val random: Random = Random.Default,
-) : CarMovementDecider {
+class DefaultCarMovementDecider : CarMovementDecider {
     override fun canMove(): Boolean {
-        return random.nextInt(MOVE_FORWARD_CONDITION_BOUNDS) >= MOVE_FORWARD_THRESHOLD
+        return nextInt(MOVE_FORWARD_CONDITION_BOUNDS) >= MOVE_FORWARD_THRESHOLD
     }
 
     companion object {
