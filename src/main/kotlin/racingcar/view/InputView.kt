@@ -1,11 +1,11 @@
-package racingcar.ui
+package racingcar.view
 
-import racingcar.application.Car
-import racingcar.application.DefaultCarMovementDecider
-import racingcar.application.RacingGame
-import racingcar.ui.CarUiConstant.COMMA
-import racingcar.ui.ResultView.printRacingResult
-import racingcar.ui.ResultView.printWinners
+import racingcar.domain.Car
+import racingcar.domain.DefaultCarMovementDecider
+import racingcar.domain.RacingGame
+import racingcar.view.CarViewConstant.COMMA
+import racingcar.view.ResultView.printRacingResult
+import racingcar.view.ResultView.printWinners
 
 fun main() {
     println("경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).")

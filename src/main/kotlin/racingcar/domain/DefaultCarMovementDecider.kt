@@ -1,4 +1,4 @@
-package racingcar.application
+package racingcar.domain
 
 import kotlin.random.Random.Default.nextInt
 

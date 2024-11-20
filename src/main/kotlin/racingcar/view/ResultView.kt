@@ -1,9 +1,9 @@
-package racingcar.ui
+package racingcar.view
 
-import racingcar.application.CarPosition
-import racingcar.application.RaceBoard
-import racingcar.ui.CarUiConstant.COMMA
-import racingcar.ui.CarUiConstant.LINE_DELIMITER
+import racingcar.domain.CarPosition
+import racingcar.domain.RaceBoard
+import racingcar.view.CarViewConstant.COMMA
+import racingcar.view.CarViewConstant.LINE_DELIMITER
 
 object ResultView {
     fun printRacingResult(raceBoard: RaceBoard) {

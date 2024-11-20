@@ -1,4 +1,4 @@
-package racingcar.application
+package racingcar.domain
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.inspectors.forAll

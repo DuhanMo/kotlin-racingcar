@@ -1,4 +1,4 @@
-package racingcar.application
+package racingcar.domain
 
 class RaceBoard(
     val raceResultPerRounds: List<RaceResultPerRound>,
