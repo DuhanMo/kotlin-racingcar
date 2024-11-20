@@ -82,10 +82,10 @@
 - [x] DefaultCarMovementDecider::중요하지 않는 테스트를 위한 도메인로직 변경 원복
 - [x] RacingGame::race결과로 race board 반환
 - [x] winner 출력시 race board를 통한 출력
-- [ ] RacingGame::card 가 스스로 판단하여 움직이도록 moveForward 시그니처 수정
-- [ ] RacingGame::CarMovementDecider를 상태로 두지않고 메서드파라미터로 전달
-- [ ] RacingGameTest::fun interface 파라미터 위치 수정과함께 람다식으로 수정
-- [ ] Winner::우승자를 찾는 역할을 다른객체에게 위임
+- [x] RacingGame::card 가 스스로 판단하여 움직이도록 moveForward 시그니처 수정
+- [x] RacingGame::CarMovementDecider를 상태로 두지않고 메서드파라미터로 전달
+- [x] RacingGameTest::fun interface 파라미터 위치 수정과함께 람다식으로 수정
+- [x] Winner::우승자를 찾는 역할을 다른객체에게 위임
 
 ### 요구사항
 #### 프로그래밍 요구사항

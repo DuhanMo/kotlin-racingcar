@@ -3,20 +3,21 @@ package racingcar.application
 import racingcar.application.RaceResultPerRound.Companion.fromCars
 
 class RacingGame(
-    private val carMovementDecider: CarMovementDecider,
     private val cars: List<Car>,
 ) {
-    fun race(moveTryCount: Int): RaceBoard {
+    fun race(
+        moveTryCount: Int,
+        carMovementDecider: CarMovementDecider,
+    ): RaceBoard {
         val raceResultPerRounds = mutableListOf<RaceResultPerRound>()
         repeat(moveTryCount) {
-            moveEachCar()
+            moveEachCar(carMovementDecider)
             raceResultPerRounds.add(fromCars(cars))
         }
         return RaceBoard(raceResultPerRounds.toList())
     }
 
-    private fun moveEachCar() {
-        cars.filter { carMovementDecider.canMove() }
-            .forEach { car -> car.moveForward() }
+    private fun moveEachCar(carMovementDecider: CarMovementDecider) {
+        cars.forEach { car -> car.moveForward(carMovementDecider) }
     }
 }

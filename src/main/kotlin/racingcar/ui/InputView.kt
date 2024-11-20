@@ -12,10 +12,11 @@ fun main() {
     val cars = inputCars()
     println("시도할 횟수는 몇 회인가요?")
     val moveTryCount =
-        readlnOrNull()?.toInt() ?: throw IllegalArgumentException("The try count cannot be null")
-    val racingGame = RacingGame(DefaultCarMovementDecider(), cars)
+        readlnOrNull()?.toInt()
+            ?: throw IllegalArgumentException("The try count cannot be null")
+    val racingGame = RacingGame(cars)
     println("실행 결과")
-    val raceBoard = racingGame.race(moveTryCount)
+    val raceBoard = racingGame.race(moveTryCount, DefaultCarMovementDecider())
     printRacingResult(raceBoard)
     printWinners(raceBoard)
 }

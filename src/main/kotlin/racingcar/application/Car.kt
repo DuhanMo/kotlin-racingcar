@@ -11,8 +11,10 @@ class Car(
     var position = position
         private set
 
-    fun moveForward() {
-        position++
+    fun moveForward(carMovementDecider: CarMovementDecider) {
+        if (carMovementDecider.canMove()) {
+            position++
+        }
     }
 
     companion object {
