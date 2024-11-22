@@ -93,10 +93,11 @@
 - [x] MVC 패턴 기반으로 리팩토링해 view 패키지의 객체가 domain 패키지 객체에 의존할 수 있지만, domain 패키지의 객체는 view 패키지 객체에 의존하지 않도록 구현한다.
 
 ### 리뷰반영사항 - 1
-Car::에러메시지 상수화
-RaceBoard::도메인객체와 DTO 분리
-ResultView::우승자 출력시 우승자를 파라미터로 추출
-CarTest::네이밍 공통화
-ResultView::불필요한 메서드추출 병합
-InputView::input에서의 도메인객체 의존해제, car생성은 controller에서 수행
-RacingGame::1줄 forEach 메서드 병합 고려
+- [x] Car::에러메시지 상수적용
+- [ ] RaceBoard::도메인객체와 DTO 분리
+- [ ] ResultView::우승자 출력시 우승자를 파라미터로 추출
+- [ ] CarTest::네이밍 공통화
+- [ ] ResultView::불필요한 메서드추출 병합
+- [ ] InputView::input에서의 도메인객체 의존해제, car생성은 controller에서 수행
+- [ ] RacingGame::1줄 forEach 메서드 병합 고려
+- [ ] dRaceBoard::data class 생성 코드 통일
