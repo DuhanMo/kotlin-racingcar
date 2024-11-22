@@ -1,5 +1,8 @@
 package racingcar.domain
 
+import racingcar.domain.dto.RaceResultPerRound
+import racingcar.domain.dto.Winner
+
 class RaceBoard(
     val raceResultPerRounds: List<RaceResultPerRound>,
 ) {
@@ -17,26 +20,4 @@ class RaceBoard(
     }
 }
 
-data class RaceResultPerRound(
-    val carPositions: List<CarPosition>,
-) {
-    companion object {
-        fun fromCars(cars: List<Car>): RaceResultPerRound {
-            return RaceResultPerRound(cars.map { CarPosition(it) })
-        }
-    }
-}
 
-data class CarPosition(
-    val name: String,
-    val position: Int,
-) {
-    constructor(car: Car) : this(
-        name = car.name,
-        position = car.position,
-    )
-}
-
-data class Winner(
-    val name: String,
-)
