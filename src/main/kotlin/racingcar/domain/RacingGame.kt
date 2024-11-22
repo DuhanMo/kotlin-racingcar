@@ -17,7 +17,4 @@ class RacingGame(
         }
         return RaceBoard(raceResultPerRounds.toList())
     }
-
-    private fun moveEachCar(carMovementDecider: CarMovementDecider) {
-    }
 }

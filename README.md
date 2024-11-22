@@ -97,7 +97,7 @@
 - [x] RaceBoard::도메인객체와 DTO 분리
 - [x] ResultView::우승자 출력시 우승자를 파라미터로 추출
 - [x] CarTest::네이밍 공통화
-- [ ] ResultView::불필요한 메서드추출 병합
-- [ ] InputView::input에서의 도메인객체 의존해제, car생성은 controller에서 수행
+- [x] ResultView::불필요한 메서드추출 병합
+- [x] InputView::input에서의 도메인객체 의존해제, car생성은 controller에서 수행
 - [ ] RacingGame::1줄 forEach 메서드 병합 고려
 - [ ] dRaceBoard::data class 생성 코드 통일
