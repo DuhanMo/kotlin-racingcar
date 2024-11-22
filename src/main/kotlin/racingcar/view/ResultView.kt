@@ -7,11 +7,8 @@ import racingcar.view.CarViewConstant.COMMA
 import racingcar.view.CarViewConstant.LINE_DELIMITER
 
 object ResultView {
-    fun announceRacingStart() {
-        println("실행 결과")
-    }
-
     fun printRacingResult(raceBoard: RaceBoard) {
+        println("실행 결과")
         raceBoard.raceResultPerRounds
             .forEach { result ->
                 printRacingResultPerRound(result.carPositions)
