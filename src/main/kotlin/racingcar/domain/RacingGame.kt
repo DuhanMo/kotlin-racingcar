@@ -1,6 +1,7 @@
 package racingcar.domain
 
-import racingcar.domain.RaceResultPerRound.Companion.fromCars
+import racingcar.domain.dto.RaceResultPerRound
+import racingcar.domain.dto.RaceResultPerRound.Companion.fromCars
 
 class RacingGame(
     private val cars: List<Car>,
@@ -18,6 +19,5 @@ class RacingGame(
     }
 
     private fun moveEachCar(carMovementDecider: CarMovementDecider) {
-
     }
 }

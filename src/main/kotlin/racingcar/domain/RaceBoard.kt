@@ -19,5 +19,3 @@ class RaceBoard(
             .map { Winner(it.name) }
     }
 }
-
-
