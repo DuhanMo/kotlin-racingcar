@@ -101,3 +101,8 @@
 - [x] InputView::input에서의 도메인객체 의존해제, car생성은 controller에서 수행
 - [x] RacingGame::1줄 forEach 메서드 병합 고려
 - [x] RaceBoard::data class 생성 코드 통일
+
+### 리뷰반영사항 - 2
+- [x] RacingApplication::Car 객체매핑 헬퍼함수로 수정
+- [ ] Car::Car name 검증 시 논리적불필요 로직 제거
+- [ ] RaceBoard::carpositions를 getter로 꺼내어 처리하는 것이 아닌 RaceResultPerRound객체에게 역할위임

@@ -9,10 +9,12 @@ import racingcar.view.ResultView.printRacingResult
 import racingcar.view.ResultView.printWinners
 
 fun main() {
-    val cars = inputCarNames().map { Car(name = it) }
+    val cars = generateCars()
     val moveTryCount = inputMoveTryCount()
     val racingGame = RacingGame(cars)
     val raceBoard = racingGame.race(moveTryCount, DefaultCarMovementDecider())
     printRacingResult(raceBoard)
     printWinners(raceBoard.findWinners())
 }
+
+private fun generateCars() = inputCarNames().map { Car(name = it) }
