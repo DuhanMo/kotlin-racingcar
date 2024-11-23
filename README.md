@@ -104,5 +104,5 @@
 
 ### 리뷰반영사항 - 2
 - [x] RacingApplication::Car 객체매핑 헬퍼함수로 수정
-- [ ] Car::Car name 검증 시 논리적불필요 로직 제거
+- [x] Car::Car name 검증 시 논리적 불필요 로직 제거
 - [ ] RaceBoard::carpositions를 getter로 꺼내어 처리하는 것이 아닌 RaceResultPerRound객체에게 역할위임
