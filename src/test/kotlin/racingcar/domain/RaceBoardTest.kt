@@ -2,7 +2,7 @@ package racingcar.domain
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
-import racingcar.domain.dto.RaceResultPerRound.Companion.fromCars
+import racingcar.domain.RaceResultPerRound.Companion.fromCars
 
 class RaceBoardTest : StringSpec({
     "findWinners() 는 포지션이 가장 높은 차를 반환한다" {

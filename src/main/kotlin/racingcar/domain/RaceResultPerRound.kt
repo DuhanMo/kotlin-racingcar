@@ -1,21 +1,19 @@
-package racingcar.domain.dto
+package racingcar.domain
 
-import racingcar.domain.Car
+import racingcar.domain.dto.CarPosition
+import racingcar.domain.dto.Winner
 
 class RaceResultPerRound(
     val carPositions: List<CarPosition>,
 ) {
     fun findWinners(): List<Winner> {
-        val maxPosition = findMaxPosition() ?: return emptyList()
+        val maxPosition =
+            carPositions.maxOfOrNull { it.position }
+                ?: return emptyList()
 
         return carPositions
             .filter { it.position == maxPosition }
             .map { Winner(it.name) }
-    }
-
-    private fun findMaxPosition(): Int? {
-        return carPositions
-            .maxOfOrNull { it.position }
     }
 
     companion object {

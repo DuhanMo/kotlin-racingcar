@@ -1,6 +1,5 @@
 package racingcar.domain
 
-import racingcar.domain.dto.RaceResultPerRound
 import racingcar.domain.dto.Winner
 
 class RaceBoard(
