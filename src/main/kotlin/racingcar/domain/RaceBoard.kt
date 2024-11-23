@@ -6,9 +6,7 @@ class RaceBoard(
     val raceResultPerRounds: List<RaceResultPerRound>,
 ) {
     fun findWinners(): List<Winner> {
-        val lastRound =
-            raceResultPerRounds.lastOrNull()
-                ?: return emptyList()
-        return lastRound.findWinners()
+        val lastRound = raceResultPerRounds.lastOrNull()
+        return lastRound?.findWinners() ?: emptyList()
     }
 }

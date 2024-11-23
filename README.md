@@ -106,3 +106,6 @@
 - [x] RacingApplication::Car 객체매핑 헬퍼함수로 수정
 - [x] Car::Car name 검증 시 논리적 불필요 로직 제거
 - [x] RaceBoard::carpositions를 getter로 꺼내어 처리하는 것이 아닌 RaceResultPerRound객체에게 역할위임
+
+### 리뷰반영사항 - 3
+- [x] RaceBoard::가독성을 위한 early return 제거
